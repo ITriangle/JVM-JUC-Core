@@ -551,7 +551,7 @@ public class CallableDemo {
         //将FutureTask对象放到Thread类的构造器里面。
         new Thread(futureTask, "AA").start();
         int result01 = 100;
-        //用FutureTask的get方法得到返回值。
+        //用FutureTask的get方法得到返回值。阻塞，等待线程执行完成
         int result02 = futureTask.get();
         System.out.println("result=" + (result01 + result02));
     }
